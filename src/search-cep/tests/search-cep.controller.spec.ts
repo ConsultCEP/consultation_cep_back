@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { SearchCepController } from './search-cep.controller';
+import { SearchCepController } from '../search-cep.controller';
 
 describe('SearchCepController', () => {
   let controller: SearchCepController;
