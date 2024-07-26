@@ -15,9 +15,9 @@ export class SearchCepService {
                     throw new NotFoundException('CEP não encontrado');
                 }
 
-                    const { localidade, uf, cep } = data;
+                const { localidade, uf, cep } = data;
 
-                    return `${localidade}, ${uf} ${cep}`
+                return `${localidade}, ${uf} ${cep}`
             })
             .catch((error: AxiosError) => {
                 throw new BadRequestException(

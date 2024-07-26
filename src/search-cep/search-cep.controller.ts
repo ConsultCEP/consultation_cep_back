@@ -7,9 +7,9 @@ export class SearchCepController {
     constructor (private readonly searchCepService: SearchCepService) {}
     
     @Get('/:cep')
-    async findAddresByCep(@Param('cep') cep: string): Promise<any> {
+    async findAddresByCep(@Param('cep') cep: string): Promise<string> {
         const data = await this.searchCepService.findAddresByCep(cep);
-        console.log(data);
+
         return data;
     }
 
