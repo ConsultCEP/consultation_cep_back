@@ -4,18 +4,18 @@ import { SearchAddres } from './dtos/search-addres.dto';
 
 @Controller('search-cep')
 export class SearchCepController {
-    constructor (private readonly searchCepService: SearchCepService) {}
-    
-    @Get('/:cep')
-    async findAddresByCep(@Param('cep') cep: string): Promise<string> {
-        const data = await this.searchCepService.findAddresByCep(cep);
+  constructor(private readonly searchCepService: SearchCepService) {}
 
-        return data;
-    }
+  @Get('/:cep')
+  async findAddresByCep(@Param('cep') cep: string): Promise<string> {
+    const data = await this.searchCepService.findAddresByCep(cep);
 
-    @Get()
-    findAdrress(@Body() body: SearchAddres): Promise<any> {
-        const { uf, cidade, logradouro } = body;
-        return this.searchCepService.findAddres({ uf, cidade, logradouro });
-    }
+    return data;
+  }
+
+  @Get()
+  findAdrress(@Body() body: SearchAddres): Promise<any> {
+    const { uf, cidade, logradouro } = body;
+    return this.searchCepService.findAddres({ uf, cidade, logradouro });
+  }
 }

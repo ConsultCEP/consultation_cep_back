@@ -1,4 +1,4 @@
 export abstract class CreateHistory {
-    search: string;
-    result: string;
+  search: string;
+  result: string;
 }

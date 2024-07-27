@@ -11,6 +11,6 @@ import { HttpModule } from '@nestjs/axios';
     }),
   ],
   controllers: [SearchCepController],
-  providers: [SearchCepService]
+  providers: [SearchCepService],
 })
 export class SearchCepModule {}

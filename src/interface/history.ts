@@ -1,5 +1,5 @@
 export interface IHistory {
-    id?: string;
-    search: string;
-    result: string;
+  id?: string;
+  search: string;
+  result: string;
 }
